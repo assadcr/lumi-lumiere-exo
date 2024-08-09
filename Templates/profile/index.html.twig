@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Mes Factures</h1>
+    <ul>
+        {% for order in orders %}
+            <li>
+                <a href="{{ path('profile_detail', {id: order.id}) }}">
+                    Facture #{{ order.id }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

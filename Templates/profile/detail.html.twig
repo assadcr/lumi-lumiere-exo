@@ -1,0 +1,8 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Détail de la Facture #{{ order.id }}</h1>
+    <p>Montant: {{ order.amount }}</p>
+    <p>Date: {{ order.date|date('d/m/Y') }}</p>
+    <!-- Ajoutez d'autres détails de la facture ici -->
+{% endblock %}
